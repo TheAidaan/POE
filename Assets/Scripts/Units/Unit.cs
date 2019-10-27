@@ -17,6 +17,9 @@ public class Unit
     public float attackTime;
     public float chaseDistance ; // distance the unit needs before chasing the attacking unit
 
+    public float damage;
+    public float maxHealth;
+
 
     private UnitState unit_State;
     public GameObject attackPoint;
@@ -38,6 +41,7 @@ public class Unit
             unit_State = UnitState.MOVE;
         }
     }
+   
 
     public void Move(Vector3 unitPosition)
     {
@@ -49,4 +53,22 @@ public class Unit
             unit_State = UnitState.ATTACK;
         }
     }
+
+    public float TakeDamage(float health, float damage)
+    {
+        return health -= damage;
+        
+    }
+
+    public bool CheckDeath(float health)
+    {
+        if (health <= 0)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+    
 }
