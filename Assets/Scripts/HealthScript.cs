@@ -11,17 +11,10 @@ public class HealthScript : MonoBehaviour
     public GameObject healthBarUI;
     public Slider healthIndicator;
 
-    public bool playerDied;
-    
     public void ApplyDamage(float damage)
     {
         health -= damage;
         print(health.ToString());
-
-        if (health<=0)
-        {
-            playerDied = true;
-        }
     }
 
     private void Awake()
@@ -32,22 +25,19 @@ public class HealthScript : MonoBehaviour
 
     void Update()
     {
-        if(playerDied)
-        {
-            print("murder");
-            Destroy(gameObject);
-        }
-
         healthIndicator.value = CalculateHealth();
 
         if (health < maxHealth)
         {
             healthBarUI.SetActive(true);
         }
+
         if (health <= 0)
         {
             Destroy(gameObject);
+            print("murder");
         }
+
         if (health > maxHealth)
         {
             health = maxHealth;   //have health reset back to max health and not go over

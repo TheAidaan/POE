@@ -7,8 +7,6 @@ using UnityEngine.AI;
 public class RangedUnit : MonoBehaviour
 {
     Unit rangedUnit = new Unit();
-
-    HealthScript health = new HealthScript();
     //public LayerMask layer;
 
     private UnitState ranged_State;
@@ -16,6 +14,7 @@ public class RangedUnit : MonoBehaviour
     public GameObject attackPoint2;
     public LayerMask enemyLayer;
 
+   
 
     //private string enemyTag;
 
@@ -31,7 +30,7 @@ public class RangedUnit : MonoBehaviour
         rangedUnit.speed = 3.5f;
 
         rangedUnit.damage = 2f;
-        health.health = health.maxHealth;
+
 
 
 

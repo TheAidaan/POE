@@ -9,7 +9,6 @@ public class MeleeUnit : MonoBehaviour
 {
     Unit meleeUnit = new Unit();
 
-    HealthScript health = AddComponent<HealthScript>();
     //public LayerMask layer;
 
     private UnitState melee_State;
@@ -32,8 +31,7 @@ public class MeleeUnit : MonoBehaviour
         meleeUnit.speed = 3.5f;
 
         meleeUnit.damage = 2f;
-        health.health = health.maxHealth;
-
+        
     }
 
     void Start()
