@@ -18,7 +18,6 @@ public class Unit
     public float chaseDistance ; // distance the unit needs before chasing the attacking unit
 
     public float damage;
-    public float maxHealth;
 
 
     private UnitState unit_State;
@@ -51,23 +50,6 @@ public class Unit
         if (Vector3.Distance(unitPosition, target.position) <= attackRange) //check if enemy target is in range
         {
             unit_State = UnitState.ATTACK;
-        }
-    }
-
-    public float TakeDamage(float health, float damage)
-    {
-        return health -= damage;
-        
-    }
-
-    public bool CheckDeath(float health)
-    {
-        if (health <= 0)
-        {
-            return true;
-        }else
-        {
-            return false;
         }
     }
     
