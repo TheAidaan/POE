@@ -569,7 +569,7 @@ MonoBehaviour:
   attackPoint2: {fileID: 0}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   enemyTeam: OrangeTeam
 --- !u!114 &1190366774391066494
 MonoBehaviour:

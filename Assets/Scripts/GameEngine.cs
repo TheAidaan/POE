@@ -6,6 +6,7 @@ public class GameEngine : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject Unit;
+    public int initialSpawnQuanitiy;
 
 
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class GameEngine : MonoBehaviour
     void StartSpawning()
     {
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < initialSpawnQuanitiy; i++)
         {
             Instantiate(Unit, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
         }

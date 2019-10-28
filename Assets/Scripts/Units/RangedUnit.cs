@@ -16,6 +16,8 @@ public class RangedUnit : MonoBehaviour
 
     public string enemyTeam;
 
+    private float timer = 0.0f;
+
     //private string enemyTag;
 
     void Awake()
@@ -31,10 +33,12 @@ public class RangedUnit : MonoBehaviour
 
         rangedUnit.damage = 2f;
 
+     
 
 
 
-    }
+
+}
     void Start()
     {
         ranged_State = UnitState.MOVE; //unit is set to move initially
@@ -51,19 +55,17 @@ public class RangedUnit : MonoBehaviour
         if (ranged_State == UnitState.ATTACK)
         {
 
-            attackPoint1.SetActive(true);
-            attackPoint2.SetActive(true);
+            
             rangedUnit.Attack(transform.position);
         }
-
-
-        StartCoroutine(checkCollison());
+        timer += Time.deltaTime;
+        checkCollison();
 
 
     }
 
     // Update is called once per frame
-    IEnumerator checkCollison()
+    private void checkCollison()
     {
         Collider[] hits = Physics.OverlapSphere(transform.position, .5f, enemyLayer);
         if (hits.Length > 0)
@@ -71,12 +73,28 @@ public class RangedUnit : MonoBehaviour
             Debug.Log("worked!");
 
             hits[0].GetComponent<HealthScript>().ApplyDamage(rangedUnit.damage);
-            attackPoint1.SetActive(false);
-            attackPoint2.SetActive(false);
-            yield return new WaitForSeconds(rangedUnit.coolDownAfterAttack);
+
+            CoolDown();
 
         }
 
+    }
+
+    private void CoolDown()
+    {
+
+        attackPoint1.SetActive(false);
+        attackPoint2.SetActive(false);
+        // Check if we have reached beyond 2 seconds.
+        // Subtracting two is more accurate over time than resetting to zero.
+        if (timer > rangedUnit.coolDownAfterAttack)
+        {
+            attackPoint1.SetActive(true);
+            attackPoint2.SetActive(true);
+            // Remove the recorded 2 seconds.
+
+
+        }
     }
 
 

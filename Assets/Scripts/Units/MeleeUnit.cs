@@ -21,7 +21,7 @@ public class MeleeUnit : MonoBehaviour
     private float waitTime = 1223.0f;
     private float timer = 0.0f;
     private float visualTime = 0.0f;
-    private float scrollBar = 1.0f;
+
 
 
     //private string enemyTag;
@@ -32,7 +32,7 @@ public class MeleeUnit : MonoBehaviour
         meleeUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
 
         meleeUnit.attackRange = 1f;
-        meleeUnit.coolDownAfterAttack = 20f;
+        meleeUnit.coolDownAfterAttack = 2f;
         meleeUnit.attackTime = 1f;
         meleeUnit.chaseDistance = 1f; // distance the unit needs before chasing the attacking unit
         meleeUnit.speed = 3.5f;
@@ -60,8 +60,8 @@ public class MeleeUnit : MonoBehaviour
            
             meleeUnit.Attack(transform.position);
         }
-       
 
+        timer += Time.deltaTime;
         checkCollison();
        
 
@@ -76,8 +76,7 @@ public class MeleeUnit : MonoBehaviour
             Debug.Log("worked!");
 
             hits[0].GetComponent<HealthScript>().ApplyDamage(meleeUnit.damage);
-            attackPoint1.SetActive(false);
-            attackPoint2.SetActive(false);
+            
             CoolDown();
 
         }
@@ -86,17 +85,17 @@ public class MeleeUnit : MonoBehaviour
 
     private void CoolDown()
     {
-        timer += Time.deltaTime;
 
+        attackPoint1.SetActive(false);
+        attackPoint2.SetActive(false);
         // Check if we have reached beyond 2 seconds.
         // Subtracting two is more accurate over time than resetting to zero.
-        if (timer > waitTime)
+        if (timer > meleeUnit.coolDownAfterAttack)
         {
-            visualTime = timer;
             attackPoint1.SetActive(true);
             attackPoint2.SetActive(true);
             // Remove the recorded 2 seconds.
-            waitTime += 3f;
+
             
         }
     }

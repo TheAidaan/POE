@@ -84,6 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3279107415220564993}
   - component: {fileID: 2668560592545326270}
+  - component: {fileID: 146145890223032344}
   m_Layer: 0
   m_Name: resource
   m_TagString: Untagged
@@ -121,6 +122,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 120.01667, y: 96.83099, z: 121.81621}
   m_Center: {x: -0.124267876, y: 46.126293, z: -0.106313355}
+--- !u!54 &146145890223032344
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007166220180440594}
+  serializedVersion: 2
+  m_Mass: 9
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &3803204052358419902
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,8 +153,8 @@ GameObject:
   m_Name: Sphere001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &6454850944989803659
 Transform:
@@ -512,8 +529,8 @@ GameObject:
   m_Name: Cylinder001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7374869116751850669
 Transform:
