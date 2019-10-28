@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.054023262, g: 0.49056602, b: 0, a: 1}
+  m_Color: {r: 0.49019608, g: 0.0000000019478643, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -465,7 +465,7 @@ MonoBehaviour:
   attackPoint2: {fileID: 996412450264636328}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
   enemyTeam: OrangeTeam
 --- !u!114 &-2285681036131066825
 MonoBehaviour:
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4245283, g: 0, b: 0.0402052, a: 1}
+  m_Color: {r: 0.15050694, g: 0.42352942, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

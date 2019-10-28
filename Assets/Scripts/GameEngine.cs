@@ -26,7 +26,7 @@ public class GameEngine : MonoBehaviour
 
         for (int i = 0; i < initialSpawnQuanitiy; i++)
         {
-            Instantiate(Unit, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
+            Instantiate(Unit, spawnPoints[i].position, Quaternion.identity);
         }
     }
 

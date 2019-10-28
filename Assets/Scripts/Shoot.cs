@@ -9,7 +9,7 @@ public class Shoot : MonoBehaviour
     float speed = 100f;
     float bulletSpeed = 100f;
 
-    bool inRange = false;
+    bool shoot = false;
 
     public GameObject bullet;
     public Transform bulletPos;
@@ -27,28 +27,26 @@ public class Shoot : MonoBehaviour
     void Update()
     {
 
-        inputX = Input.GetAxis("Horizontal");
-        inputY = Input.GetAxis("Vertical");
 
         timer += Time.deltaTime;
-        if (timer < 3)
+        if (timer > 3)
         {
-            inRange = true;
+            shoot = true;
             timer = 0;
 
-            if (inRange)
+            if (shoot)
             {
                 Fire();
             }
 
-            inRange = false;
+            shoot = false;
 
         }
 
     }
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(inputX * speed, rb.velocity.y, inputY * speed);
+        //rb.velocity = new Vector3(inputX * speed, rb.velocity.y, inputY * speed);
 
 
     }
@@ -59,35 +57,22 @@ public class Shoot : MonoBehaviour
     }
     void Fire()
     {
-        GameObject bulletSpawn = Instantiate(bullet, bulletPos.position, bullet.transform.rotation);
 
-        bulletSpawn.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, bulletSpeed);
+        StartCoroutine(StartShooting());
+
+        IEnumerator StartShooting()
+        {
+            yield return new WaitForSeconds(3);
+            GameObject bulletSpawn = Instantiate(bullet, bulletPos.position, bullet.transform.rotation);
+
+            bulletSpawn.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, bulletSpeed);
 
 
-        Destroy(bulletSpawn, 2);   //3 is seconds till destroy
-
-
+            Destroy(bulletSpawn, 2);   //2 seconds till destroy
+            //Instantiate(bullet, bulletPos.position, Quaternion.identity);
+            //StartCoroutine(StartShooting());
+        }
         // we need arigidbodu/char controller to allow storing in var
         //we can access velocity
     }
 }
-
-    //StartCoroutine(StartShooting());
-    //IEnumerator StartShooting()
-    //{
-    //    yield return new WaitForSeconds(3);
-    //    Instantiate(bullet, bulletPos.position, Quaternion.identity);
-    //    StartCoroutine(StartShooting);
-    //}
-
-//private void FixedUpdate()
-//{
-
-//    if (shoot)
-//    {
-//        Shoot();
-
-//        shoot = false;
-//    }
-//}
-

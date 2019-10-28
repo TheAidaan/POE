@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: -6317140043862389232}
   m_Layer: 0
   m_Name: WizardUnit
-  m_TagString: Untagged
+  m_TagString: WizardTeam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,7 +228,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 8dfe3d4781ccd494390eb49f848e8e75, type: 3}
+  - {fileID: 2100000, guid: 873fb0aed52611e4083676797ba6dcde, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -311,7 +311,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f8723018b134b4795200a94e3ec872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 0}
+  attackPoint1: {fileID: 0}
+  attackPoint2: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 768
+  enemyTeam: WizardTeam
 --- !u!1 &6048617381838875594
 GameObject:
   m_ObjectHideFlags: 0

@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.054023262, g: 0.49056602, b: 0, a: 1}
+  m_Color: {r: 0.49019608, g: 0.057912163, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 5352721750774680385}
   - component: {fileID: 5527488459483058857}
   - component: {fileID: 5428696251633805193}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: MeleeUnit
   m_TagString: OrangeTeam
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ MonoBehaviour:
   attackPoint2: {fileID: 2793019669720850454}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   enemyTeam: PurpleTeam
 --- !u!114 &5428696251633805193
 MonoBehaviour:
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4245283, g: 0, b: 0.0402052, a: 1}
+  m_Color: {r: 0.03142009, g: 0.42352942, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

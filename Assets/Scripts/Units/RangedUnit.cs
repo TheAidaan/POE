@@ -16,6 +16,8 @@ public class RangedUnit : MonoBehaviour
 
     public string enemyTeam;
 
+    int enemyCode;
+
     private float timer = 0.0f;
 
     //private string enemyTag;
@@ -23,8 +25,15 @@ public class RangedUnit : MonoBehaviour
     void Awake()
     {
         rangedUnit.navAgent = GetComponent<NavMeshAgent>();
-        rangedUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
-
+        enemyCode = Random.RandomRange(0, 2);
+        if (enemyCode == 1)
+        {
+            rangedUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
+        }
+        else
+        {
+            rangedUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on oposing team
+        }
         rangedUnit.attackRange = 1f;
         rangedUnit.coolDownAfterAttack = 20f;
         rangedUnit.attackTime = 1f;

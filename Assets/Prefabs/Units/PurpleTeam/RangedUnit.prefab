@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449344924841103495}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   m_Component:
   - component: {fileID: 449344925290843367}
   - component: {fileID: 449344925290843366}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 449344925757979725}
   - component: {fileID: 449344925757979723}
   - component: {fileID: 449344925757979724}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4245283, g: 0, b: 0.0402052, a: 1}
+  m_Color: {r: 0.1580243, g: 0.42352942, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 449344925948516634}
   - component: {fileID: 449344925948516635}
   - component: {fileID: 449344925948516636}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 449344926549503464}
   - component: {fileID: 449344926549503478}
   - component: {fileID: 449344926549503479}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.054023262, g: 0.49056602, b: 0, a: 1}
+  m_Color: {r: 0.49019608, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -383,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4326247070038521045}
   - component: {fileID: 2959592734158661282}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +434,8 @@ GameObject:
   - component: {fileID: 540064764539354269}
   - component: {fileID: 4596979229960195325}
   - component: {fileID: 1190366774391066494}
-  m_Layer: 8
+  - component: {fileID: 6165743272174809713}
+  m_Layer: 9
   m_Name: RangedUnit
   m_TagString: PurpleTeam
   m_Icon: {fileID: 0}
@@ -587,3 +588,17 @@ MonoBehaviour:
   maxHealth: 10
   healthBarUI: {fileID: 449344925948516637}
   healthIndicator: {fileID: 449344925290843366}
+--- !u!114 &6165743272174809713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8787583703787793781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd149328efcf32340bdebf48a5d6d129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 5687411378620037259, guid: 8c6aa9340a7ea3743a2827fb87dd58ef, type: 3}
+  bulletPos: {fileID: 4326247070038521045}

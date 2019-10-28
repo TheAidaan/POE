@@ -22,15 +22,22 @@ public class MeleeUnit : MonoBehaviour
     private float timer = 0.0f;
     private float visualTime = 0.0f;
 
-
+    int enemyCode;
 
     //private string enemyTag;
 
     void Awake()
     {       
         meleeUnit.navAgent = GetComponent<NavMeshAgent>();
-        meleeUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
-
+        enemyCode = Random.RandomRange(0, 2);
+        if (enemyCode == 1)
+        {
+            meleeUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
+        }
+        else
+        {
+           meleeUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on oposing team
+        }
         meleeUnit.attackRange = 1f;
         meleeUnit.coolDownAfterAttack = 2f;
         meleeUnit.attackTime = 1f;

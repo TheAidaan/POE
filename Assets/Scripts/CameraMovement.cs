@@ -11,7 +11,7 @@ public class CameraMovement : MonoBehaviour
     public float minY = 20f;
     public float maxY = 120f;
 
-    
+
     void Update()
     {
 
@@ -36,7 +36,7 @@ public class CameraMovement : MonoBehaviour
         }
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        pos.y -= scroll * scrollSpeed * 100f *  Time.deltaTime;
+        pos.y -= scroll * scrollSpeed * 100f * Time.deltaTime;
 
         pos.x = Mathf.Clamp(pos.x, -panLimit.x, panLimit.x);    //limiting the amount we can pan side to side and up and down
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
