@@ -14,14 +14,14 @@ public class RangedUnit : MonoBehaviour
     public GameObject attackPoint2;
     public LayerMask enemyLayer;
 
-   
+    public string enemyTeam;
 
     //private string enemyTag;
 
     void Awake()
     {
         rangedUnit.navAgent = GetComponent<NavMeshAgent>();
-        rangedUnit.target = GameObject.FindGameObjectWithTag("RedTeam").transform; // unit find unit on oposing team
+        rangedUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
 
         rangedUnit.attackRange = 1f;
         rangedUnit.coolDownAfterAttack = 20f;

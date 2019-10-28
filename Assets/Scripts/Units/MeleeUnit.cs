@@ -16,13 +16,20 @@ public class MeleeUnit : MonoBehaviour
     public GameObject attackPoint2;
     public LayerMask enemyLayer;
 
+    public string enemyTeam;
+
+    private float waitTime = 1223.0f;
+    private float timer = 0.0f;
+    private float visualTime = 0.0f;
+    private float scrollBar = 1.0f;
+
 
     //private string enemyTag;
 
     void Awake()
     {       
         meleeUnit.navAgent = GetComponent<NavMeshAgent>();
-        meleeUnit.target = GameObject.FindGameObjectWithTag("RedTeam").transform; // unit find unit on oposing team
+        meleeUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
 
         meleeUnit.attackRange = 1f;
         meleeUnit.coolDownAfterAttack = 20f;
@@ -31,7 +38,7 @@ public class MeleeUnit : MonoBehaviour
         meleeUnit.speed = 3.5f;
 
         meleeUnit.damage = 2f;
-        
+
     }
 
     void Start()
@@ -50,19 +57,18 @@ public class MeleeUnit : MonoBehaviour
         if (melee_State == UnitState.ATTACK)
         {
             
-            attackPoint1.SetActive(true);
-            attackPoint2.SetActive(true);
+           
             meleeUnit.Attack(transform.position);
         }
        
 
-        StartCoroutine(checkCollison());
+        checkCollison();
        
 
     }
 
     // Update is called once per frame
-    IEnumerator checkCollison()
+    private void checkCollison()
     {
         Collider[] hits = Physics.OverlapSphere(transform.position, .5f, enemyLayer);
         if (hits.Length > 0)
@@ -72,12 +78,29 @@ public class MeleeUnit : MonoBehaviour
             hits[0].GetComponent<HealthScript>().ApplyDamage(meleeUnit.damage);
             attackPoint1.SetActive(false);
             attackPoint2.SetActive(false);
-            yield return new WaitForSeconds(meleeUnit.coolDownAfterAttack);
+            CoolDown();
 
         }
 
     }
 
+    private void CoolDown()
+    {
+        timer += Time.deltaTime;
 
-
+        // Check if we have reached beyond 2 seconds.
+        // Subtracting two is more accurate over time than resetting to zero.
+        if (timer > waitTime)
+        {
+            visualTime = timer;
+            attackPoint1.SetActive(true);
+            attackPoint2.SetActive(true);
+            // Remove the recorded 2 seconds.
+            waitTime += 3f;
+            
+        }
+    }
 }
+
+
+
