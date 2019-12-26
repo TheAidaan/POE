@@ -7,11 +7,11 @@ using UnityEngine.AI;
 public class WizardUnit : MonoBehaviour
 {
     Unit wizardUnit = new Unit();
+    public GameObject attackPoint;
     //public LayerMask layer;
 
     private UnitState wizard_State;
-    public GameObject attackPoint1;
-    public GameObject attackPoint2;
+    
     public LayerMask enemyLayer;
 
     public string enemyTeam;
@@ -25,7 +25,7 @@ public class WizardUnit : MonoBehaviour
     void Awake()
     {
         wizardUnit.navAgent = GetComponent<NavMeshAgent>();
-        enemyCode = Random.RandomRange(0, 2);
+        enemyCode = Random.Range(0, 2); // picks random target to attack 
         if (enemyCode == 1)
         {
             wizardUnit.target = GameObject.FindGameObjectWithTag("OrangeTeam").transform; // unit find unit on oposing team
@@ -84,7 +84,7 @@ public class WizardUnit : MonoBehaviour
 
             hits[0].GetComponent<HealthScript>().ApplyDamage(wizardUnit.damage);
 
-            CoolDown();
+            //CoolDown();
 
         }
 
@@ -93,14 +93,12 @@ public class WizardUnit : MonoBehaviour
     private void CoolDown()
     {
 
-        attackPoint1.SetActive(false);
-        attackPoint2.SetActive(false);
+        attackPoint.SetActive(false);
         // Check if we have reached beyond 2 seconds.
         // Subtracting two is more accurate over time than resetting to zero.
         if (timer > wizardUnit.coolDownAfterAttack)
         {
-            attackPoint1.SetActive(true);
-            attackPoint2.SetActive(true);
+            attackPoint.SetActive(true);
             // Remove the recorded 2 seconds.
 
 

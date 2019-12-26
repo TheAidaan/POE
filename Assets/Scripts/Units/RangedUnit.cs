@@ -25,16 +25,15 @@ public class RangedUnit : MonoBehaviour
     void Awake()
     {
         rangedUnit.navAgent = GetComponent<NavMeshAgent>();
-        enemyCode = Random.Range(0, 2);
-        // if (enemyCode == 1)
-        //{
-        // rangedUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
-        //}
-        // else
-        //{
-        //rangedUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on oposing team
-        // }
-        rangedUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform;
+        enemyCode = Random.Range(0, 12); // picks random target to attack 
+        if (enemyCode == 1)
+        {
+            rangedUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
+        }
+        else
+        {
+            rangedUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on wizard team
+        }
 
         rangedUnit.attackRange = 1f;
         rangedUnit.coolDownAfterAttack = 20f;
