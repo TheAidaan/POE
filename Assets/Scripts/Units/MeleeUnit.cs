@@ -29,15 +29,7 @@ public class MeleeUnit : MonoBehaviour
     void Awake()
     {       
         meleeUnit.navAgent = GetComponent<NavMeshAgent>();
-        enemyCode = Random.Range(0, 2); // picks random target to attack 
-        if (enemyCode == 1)
-        {
-        meleeUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
-        }
-        else
-        {
-           meleeUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on  wizard team
-        }
+        GetTarget();
         meleeUnit.attackRange = 1f;
         meleeUnit.coolDownAfterAttack = 2f;
         meleeUnit.attackTime = 1f;
@@ -102,8 +94,20 @@ public class MeleeUnit : MonoBehaviour
             attackPoint1.SetActive(true);
             attackPoint2.SetActive(true);
             // Remove the recorded 2 seconds.
-
             
+        }
+    }
+
+    private void GetTarget()
+    {
+        enemyCode = Random.Range(0, 2); // picks random target to attack 
+        if (enemyCode == 1)
+        {
+            meleeUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
+        }
+        else
+        {
+            meleeUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on  wizard team
         }
     }
 }

@@ -25,15 +25,7 @@ public class WizardUnit : MonoBehaviour
     void Awake()
     {
         wizardUnit.navAgent = GetComponent<NavMeshAgent>();
-        enemyCode = Random.Range(0, 2); // picks random target to attack 
-        if (enemyCode == 1)
-        {
-            wizardUnit.target = GameObject.FindGameObjectWithTag("OrangeTeam").transform; // unit find unit on oposing team
-        }else
-        {
-            wizardUnit.target = GameObject.FindGameObjectWithTag("PurpleTeam").transform; // unit find unit on oposing team
-        }
-       
+        GetTarget();
 
         wizardUnit.attackRange = 1f;
         wizardUnit.coolDownAfterAttack = 20f;
@@ -84,7 +76,7 @@ public class WizardUnit : MonoBehaviour
 
             hits[0].GetComponent<HealthScript>().ApplyDamage(wizardUnit.damage);
 
-            //CoolDown();
+            CoolDown();
 
         }
 
@@ -102,6 +94,19 @@ public class WizardUnit : MonoBehaviour
             // Remove the recorded 2 seconds.
 
 
+        }
+    }
+
+    private void GetTarget()
+    {
+        enemyCode = Random.Range(0, 2); // picks random target to attack 
+        if (enemyCode == 1)
+        {
+            wizardUnit.target = GameObject.FindGameObjectWithTag("OrangeTeam").transform; // unit find unit on oposing team
+        }
+        else
+        {
+            wizardUnit.target = GameObject.FindGameObjectWithTag("PurpleTeam").transform; // unit find unit on oposing team
         }
     }
 
