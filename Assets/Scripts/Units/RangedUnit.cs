@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class RangedUnit : MonoBehaviour
 {
-    Unit rangedUnit = new Unit();
+    public Unit rangedUnit = new Unit();
     //public LayerMask layer;
 
     private UnitState ranged_State;
@@ -25,15 +25,17 @@ public class RangedUnit : MonoBehaviour
     void Awake()
     {
         rangedUnit.navAgent = GetComponent<NavMeshAgent>();
-        enemyCode = Random.RandomRange(0, 2);
-        if (enemyCode == 1)
-        {
-            rangedUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
-        }
-        else
-        {
-            rangedUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on oposing team
-        }
+        enemyCode = Random.Range(0, 2);
+        // if (enemyCode == 1)
+        //{
+        // rangedUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
+        //}
+        // else
+        //{
+        //rangedUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on oposing team
+        // }
+        rangedUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform;
+
         rangedUnit.attackRange = 1f;
         rangedUnit.coolDownAfterAttack = 20f;
         rangedUnit.attackTime = 1f;
