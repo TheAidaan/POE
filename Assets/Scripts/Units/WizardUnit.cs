@@ -51,7 +51,7 @@ public class WizardUnit : MonoBehaviour
     {
         if (wizard_State == UnitState.MOVE)
         {
-            wizardUnit.Move(transform.position);
+            wizardUnit.Move(transform.position, wizardUnit.target.position);
         }
 
         if (wizard_State == UnitState.ATTACK)
@@ -77,6 +77,11 @@ public class WizardUnit : MonoBehaviour
             hits[0].GetComponent<HealthScript>().ApplyDamage(wizardUnit.damage);
 
             CoolDown();
+
+            if (GetComponent<HealthScript>().isDead())
+            {
+                GetTarget();
+            }
 
         }
 

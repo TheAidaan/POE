@@ -32,11 +32,7 @@ public class HealthScript : MonoBehaviour
             healthBarUI.SetActive(true);
         }
 
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-            print("murder");
-        }
+        isDead();
 
         if (health > maxHealth)
         {
@@ -47,6 +43,17 @@ public class HealthScript : MonoBehaviour
     float CalculateHealth()
     {
         return health / maxHealth;  //if we have 100/100 then slider will return value of 1 (full)
+    }
+
+    public bool isDead()
+    {
+        if (health < 0)
+        {
+            Destroy(gameObject);
+        return true; 
+    }
+        else
+            return false;
     }
 
 }

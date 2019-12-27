@@ -42,12 +42,12 @@ public class Unit
     }
    
 
-    public void Move(Vector3 unitPosition)
+    public void Move(Vector3 unitPosition, Vector3 target)
     {
-        navAgent.SetDestination(target.position); //sets destination
+        navAgent.SetDestination(target); //sets destination
         navAgent.speed = speed;
 
-        if (Vector3.Distance(unitPosition, target.position) <= attackRange) //check if enemy target is in range
+        if (Vector3.Distance(unitPosition, target) <= attackRange) //check if enemy target is in range
         {
             unit_State = UnitState.ATTACK;
         }

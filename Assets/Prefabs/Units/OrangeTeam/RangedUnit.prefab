@@ -156,7 +156,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: -0.4391051}
-  m_SizeDelta: {x: 950, y: 543}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2851828089524932923
 Canvas:
@@ -566,8 +566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b8943d64d445b44acf54f27436c983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint1: {fileID: 0}
-  attackPoint2: {fileID: 0}
+  attackPoint: {fileID: 3709811041733604335, guid: 5f6d9e41831388f4c8b1946fd45e3f08,
+    type: 3}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512

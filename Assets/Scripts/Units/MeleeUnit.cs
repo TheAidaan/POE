@@ -50,7 +50,7 @@ public class MeleeUnit : MonoBehaviour
     {
         if (melee_State == UnitState.MOVE)
         {
-            meleeUnit.Move(transform.position);
+            meleeUnit.Move(transform.position, meleeUnit.target.position);
         }
 
         if (melee_State == UnitState.ATTACK)
@@ -77,6 +77,11 @@ public class MeleeUnit : MonoBehaviour
             hits[0].GetComponent<HealthScript>().ApplyDamage(meleeUnit.damage);
             
             CoolDown();
+
+            if (GetComponent<HealthScript>().isDead())
+            {
+                GetTarget();
+            }
 
         }
 

@@ -10,8 +10,7 @@ public class RangedUnit : MonoBehaviour
     //public LayerMask layer;
 
     private UnitState ranged_State;
-    public GameObject attackPoint1;
-    public GameObject attackPoint2;
+    public GameObject attackPoint;
     public LayerMask enemyLayer;
 
     public string enemyTeam;
@@ -45,7 +44,7 @@ public class RangedUnit : MonoBehaviour
     {
         if (ranged_State == UnitState.MOVE)
         {
-            rangedUnit.Move(transform.position);
+            rangedUnit.Move(transform.position, rangedUnit.target.position);
         }
 
         if (ranged_State == UnitState.ATTACK)
@@ -72,6 +71,11 @@ public class RangedUnit : MonoBehaviour
 
             CoolDown();
 
+            if (GetComponent<HealthScript>().isDead())
+            {
+                GetTarget();
+            }
+
         }
 
     }
@@ -79,14 +83,12 @@ public class RangedUnit : MonoBehaviour
     private void CoolDown()
     {
 
-        attackPoint1.SetActive(false);
-        attackPoint2.SetActive(false);
+        attackPoint.SetActive(false);
         // Check if we have reached beyond 2 seconds.
         // Subtracting two is more accurate over time than resetting to zero.
         if (timer > rangedUnit.coolDownAfterAttack)
         {
-            attackPoint1.SetActive(true);
-            attackPoint2.SetActive(true);
+            attackPoint.SetActive(true);
             // Remove the recorded 2 seconds.
 
 
