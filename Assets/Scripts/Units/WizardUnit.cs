@@ -62,7 +62,14 @@ public class WizardUnit : MonoBehaviour
 
         if (GetComponent<HealthScript>().isDead())
         {
+            gameObject.name = "Dead";
             Destroy(gameObject);
+            
+        }
+
+        if (wizardUnit.target.gameObject.name == ("Dead"))
+        {
+            GetTarget();
         }
 
     }

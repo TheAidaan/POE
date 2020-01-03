@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Resource : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,10 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (GetComponent<HealthScript>().isDead())
         {
+            gameObject.name = "Dead";
             Destroy(gameObject);
+            
         }
+
     }
 }

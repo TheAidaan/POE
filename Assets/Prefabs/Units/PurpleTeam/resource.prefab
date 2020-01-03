@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 2668560592545326270}
   - component: {fileID: 146145890223032344}
   - component: {fileID: 7181374754618759612}
+  - component: {fileID: 8095667333088367061}
   m_Layer: 9
   m_Name: resource
   m_TagString: PurpleBuilding
@@ -155,6 +156,18 @@ MonoBehaviour:
   maxHealth: 50
   healthBarUI: {fileID: 6206257460139585970}
   healthIndicator: {fileID: 1532850667347486397}
+--- !u!114 &8095667333088367061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007166220180440594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ec778de07793b46b13836d12aaf689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3803204052358419902
 GameObject:
   m_ObjectHideFlags: 0

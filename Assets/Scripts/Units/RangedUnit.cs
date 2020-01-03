@@ -61,7 +61,14 @@ public class RangedUnit : MonoBehaviour
 
         if (GetComponent<HealthScript>().isDead())
         {
+            gameObject.name = "Dead";
             Destroy(gameObject);
+            
+        }
+
+        if (rangedUnit.target.gameObject.name == ("Dead"))
+        {
+            GetTarget();
         }
 
 

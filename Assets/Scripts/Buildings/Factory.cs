@@ -15,7 +15,9 @@ public class Factory : MonoBehaviour
     {
         if (GetComponent<HealthScript>().isDead())
         {
+            gameObject.name = "Dead";
             Destroy(gameObject);
+            
         }
     }
 }

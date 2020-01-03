@@ -67,7 +67,19 @@ public class MeleeUnit : MonoBehaviour
 
         if (GetComponent<HealthScript>().isDead())
         {
-           Destroy(gameObject);
+            gameObject.name = "Dead";
+            Destroy(gameObject);
+            
+        }
+
+        //if (meleeUnit.target.gameObject.GetComponent<HealthScript>().isDead())
+        //{
+        //    GetTarget();
+        //}
+
+        if (meleeUnit.target.gameObject.name==("Dead"))
+        {
+            GetTarget();
         }
 
 

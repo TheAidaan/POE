@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 7425495084840930895}
   - component: {fileID: 4409391350858993570}
   - component: {fileID: 1714648836053757385}
+  - component: {fileID: 1779717120246821797}
   m_Layer: 8
   m_Name: resource
   m_TagString: OrangeBuilding
@@ -531,6 +532,18 @@ MonoBehaviour:
   maxHealth: 50
   healthBarUI: {fileID: 2291091415218027603}
   healthIndicator: {fileID: 3656343516070497586}
+--- !u!114 &1779717120246821797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475871435802520803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ec778de07793b46b13836d12aaf689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8557886195050823503
 GameObject:
   m_ObjectHideFlags: 0
