@@ -30,7 +30,7 @@ public class MeleeUnit : MonoBehaviour
     void Awake()
     {       
         meleeUnit.navAgent = GetComponent<NavMeshAgent>();
-        GetTarget();
+        
         meleeUnit.attackRange = 1f;
         meleeUnit.coolDownAfterAttack = 2f;
         meleeUnit.attackTime = 1f;
@@ -45,6 +45,7 @@ public class MeleeUnit : MonoBehaviour
     {
         melee_State = UnitState.MOVE; //unit is set to move initially
         meleeUnit.attackTime = meleeUnit.coolDownAfterAttack;
+        GetTarget();
     }
 
     void Update()
@@ -124,6 +125,7 @@ public class MeleeUnit : MonoBehaviour
             
             
         }
+
     }
 }
 

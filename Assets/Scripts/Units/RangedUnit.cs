@@ -25,7 +25,7 @@ public class RangedUnit : MonoBehaviour
     void Awake()
     {
         rangedUnit.navAgent = GetComponent<NavMeshAgent>();
-        GetTarget();
+        //GetTarget();
 
         rangedUnit.attackRange = 1f;
         rangedUnit.coolDownAfterAttack = 20f;
@@ -39,6 +39,8 @@ public class RangedUnit : MonoBehaviour
     {
         ranged_State = UnitState.MOVE; //unit is set to move initially
         rangedUnit.attackTime = rangedUnit.coolDownAfterAttack;
+
+        GetTarget();
     }
 
     void Update()

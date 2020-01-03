@@ -14,7 +14,6 @@ public class WizardUnit : MonoBehaviour
     
     public LayerMask enemyLayer;
 
-    public string enemyTeam;
 
     int enemyCode;
 
@@ -25,7 +24,7 @@ public class WizardUnit : MonoBehaviour
     void Awake()
     {
         wizardUnit.navAgent = GetComponent<NavMeshAgent>();
-        GetTarget();
+       // GetTarget();
 
         wizardUnit.attackRange = 1f;
         wizardUnit.coolDownAfterAttack = 20f;
@@ -45,6 +44,8 @@ public class WizardUnit : MonoBehaviour
     {
         wizard_State = UnitState.MOVE; //unit is set to move initially
         wizardUnit.attackTime = wizardUnit.coolDownAfterAttack;
+
+        GetTarget();
     }
 
     void Update()
