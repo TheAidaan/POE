@@ -19,7 +19,7 @@ public class HealthScript : MonoBehaviour
 
     private void Awake()
     {
-        maxHealth = 10f;
+        
         healthIndicator.value = CalculateHealth();
     }
 

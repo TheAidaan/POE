@@ -76,7 +76,7 @@ public class WizardUnit : MonoBehaviour
 
             hits[0].GetComponent<HealthScript>().ApplyDamage(wizardUnit.damage);
 
-            CoolDown();
+            //CoolDown();
 
             if (GetComponent<HealthScript>().isDead())
             {

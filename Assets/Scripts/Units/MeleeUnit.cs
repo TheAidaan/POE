@@ -77,7 +77,7 @@ public class MeleeUnit : MonoBehaviour
 
             hits[0].GetComponent<HealthScript>().ApplyDamage(meleeUnit.damage);
             
-            CoolDown();
+            //CoolDown();
 
             if (GetComponent<HealthScript>().isDead())
             {
@@ -106,7 +106,7 @@ public class MeleeUnit : MonoBehaviour
 
     private void GetTarget()
     {
-        enemyCode = Random.Range(0, 3); // picks random target to attack 
+        enemyCode = Random.Range(0, 2); // picks random target to attack 
         if (enemyCode == 1)
         {
             meleeUnit.target = GameObject.FindGameObjectWithTag(enemyBuilding).transform; // unit find unit on oposing team
