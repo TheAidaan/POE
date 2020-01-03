@@ -11,10 +11,11 @@ public class RangedUnit : MonoBehaviour
 
     private UnitState ranged_State;
     public GameObject attackPoint;
-    public LayerMask enemyLayer;
+    private LayerMask enemyLayer;
 
     public string enemyBuilding;
     public string enemyUnit;
+    public string enemyTeam;
 
     int enemyCode;
 
@@ -110,22 +111,29 @@ public class RangedUnit : MonoBehaviour
         if (enemyCode == 1)
         {
             rangedUnit.target = GameObject.FindGameObjectWithTag(enemyBuilding).transform; // unit find unit on oposing team
+            enemyLayer = LayerMask.GetMask(enemyTeam);
+
         }
         else
         {
             if (enemyCode == 2)
             {
                 rangedUnit.target = GameObject.FindGameObjectWithTag(enemyUnit).transform; // unit find unit on oposing team
+                enemyLayer = LayerMask.GetMask(enemyTeam);
             }
             else
             {
                 rangedUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on  wizard team
+                enemyLayer = LayerMask.GetMask("WizardTeam");
+
             }
-
-
         }
+
+
     }
 
-
-
 }
+
+
+
+

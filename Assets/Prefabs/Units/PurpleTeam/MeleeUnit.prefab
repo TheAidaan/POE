@@ -463,11 +463,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPoint1: {fileID: 3143114836982248183}
   attackPoint2: {fileID: 996412450264636328}
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 256
   enemyBuilding: OrangeBuilding
   enemyUnit: OrangeUnit
+  enemyTeam: OrangeTeam
 --- !u!114 &-2285681036131066825
 MonoBehaviour:
   m_ObjectHideFlags: 0

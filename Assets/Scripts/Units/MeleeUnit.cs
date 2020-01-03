@@ -14,7 +14,7 @@ public class MeleeUnit : MonoBehaviour
     private UnitState melee_State;
     public GameObject attackPoint1;
     public GameObject attackPoint2;
-    public LayerMask enemyLayer;
+    private LayerMask enemyLayer;
 
     public string enemyBuilding;
     public string enemyUnit;
@@ -24,6 +24,7 @@ public class MeleeUnit : MonoBehaviour
     private float visualTime = 0.0f;
 
     int enemyCode;
+    public string enemyTeam;
 
     //private string enemyTag;
 
@@ -123,20 +124,27 @@ public class MeleeUnit : MonoBehaviour
         if (enemyCode == 1)
         {
             meleeUnit.target = GameObject.FindGameObjectWithTag(enemyBuilding).transform; // unit find unit on oposing team
+            enemyLayer = LayerMask.GetMask(enemyTeam);
+
         }
         else
         {
             if (enemyCode == 2)
             {
                 meleeUnit.target = GameObject.FindGameObjectWithTag(enemyUnit).transform; // unit find unit on oposing team
+                enemyLayer = LayerMask.GetMask(enemyTeam);
+
             }
                 else
                 {
                     meleeUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on  wizard team
+                    enemyLayer = LayerMask.GetMask("WizardTeam");
+
                 }
-            
-            
         }
+            
+            
+        
 
     }
 }

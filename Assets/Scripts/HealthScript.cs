@@ -18,8 +18,7 @@ public class HealthScript : MonoBehaviour
     }
 
     private void Awake()
-    {
-        
+    {  
         healthIndicator.value = CalculateHealth();
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3686632200312544664}
   - component: {fileID: 6221911463051369199}
   - component: {fileID: 5489583196289935188}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4245283, g: 0, b: 0.0402052, a: 1}
+  m_Color: {r: 0, g: 0.42352942, b: 0.026677491, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2125865810916861265}
   - component: {fileID: 9025203544924386548}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 101135368074668594}
   - component: {fileID: -6317140043862389232}
   - component: {fileID: 9042276062315726982}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WizardUnit
   m_TagString: WizardTeam
   m_Icon: {fileID: 0}
@@ -312,9 +312,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 8414346793526596295}
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 768
 --- !u!114 &9042276062315726982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +339,7 @@ GameObject:
   - component: {fileID: 4024480498328106603}
   - component: {fileID: 1128302306136904469}
   - component: {fileID: 6140167055602062212}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.054023262, g: 0.49056602, b: 0, a: 1}
+  m_Color: {r: 0.49019608, g: 0.023040522, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -417,7 +414,7 @@ GameObject:
   - component: {fileID: 9038525449004420130}
   - component: {fileID: 9143638878179633901}
   - component: {fileID: 6911149269305626599}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +513,7 @@ GameObject:
   - component: {fileID: 5852111635177070541}
   - component: {fileID: 7200523146429068306}
   - component: {fileID: 3870012890314832884}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttackSpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7542544618874279292}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -52,9 +52,16 @@ public class WizardUnit : MonoBehaviour
             Destroy(gameObject);
         }
 
+        Debug.Log(GetComponent<HealthScript>().health);
+
         if (wizard_State == UnitState.MOVE)
         {
-            wizardUnit.Move(transform.position, wizardUnit.target.position);
+            if (gameObject.name == "Dead")
+            {
+                Destroy(gameObject);
+            }
+            else
+            { wizardUnit.Move(transform.position, wizardUnit.target.position); }
         }
 
         if (wizard_State == UnitState.ATTACK)

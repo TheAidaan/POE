@@ -403,11 +403,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPoint1: {fileID: 40441161897806153}
   attackPoint2: {fileID: 2793019669720850454}
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 512
   enemyBuilding: PurpleBuilding
   enemyUnit: PurpleUnit
+  enemyTeam: PurpleTeam
 --- !u!114 &5428696251633805193
 MonoBehaviour:
   m_ObjectHideFlags: 0
