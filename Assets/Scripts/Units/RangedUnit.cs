@@ -78,8 +78,7 @@ public class RangedUnit : MonoBehaviour
     {
         Collider[] hits = Physics.OverlapSphere(transform.position, .5f, enemyLayer);
         if (hits.Length > 0)
-        {
-            Debug.Log("worked!");
+        { 
 
             hits[0].GetComponent<HealthScript>().ApplyDamage(rangedUnit.damage);
 

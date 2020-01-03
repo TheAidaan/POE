@@ -52,8 +52,6 @@ public class WizardUnit : MonoBehaviour
             Destroy(gameObject);
         }
 
-        Debug.Log(GetComponent<HealthScript>().health);
-
         if (wizard_State == UnitState.MOVE)
         {
             if (gameObject.name == "Dead")

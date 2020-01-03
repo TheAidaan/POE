@@ -14,7 +14,7 @@ public class HealthScript : MonoBehaviour
     public void ApplyDamage(float damage)
     {
         health -= damage;
-        print(health.ToString());
+
     }
 
     private void Awake()
