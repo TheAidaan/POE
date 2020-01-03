@@ -46,15 +46,14 @@ public class WizardUnit : MonoBehaviour
 
     void Update()
     {
+       
         if (wizard_State == UnitState.MOVE)
         {
             wizardUnit.Move(transform.position, wizardUnit.target.position);
         }
 
         if (wizard_State == UnitState.ATTACK)
-        {
-
-
+        { 
             wizardUnit.Attack(transform.position);
         }
         timer += Time.deltaTime;
@@ -63,14 +62,16 @@ public class WizardUnit : MonoBehaviour
         if (GetComponent<HealthScript>().isDead())
         {
             gameObject.name = "Dead";
-            Destroy(gameObject);
-            
+            Destroy(gameObject);     
         }
 
         if (wizardUnit.target.gameObject.name == ("Dead"))
         {
             GetTarget();
         }
+
+
+
 
     }
 
@@ -103,7 +104,7 @@ public class WizardUnit : MonoBehaviour
 
     private void GetTarget()
     {
-        enemyCode = Random.Range(0, 2); // picks random target to attack 
+        enemyCode = Random.Range(0, 1); // picks random target to attack 
         if (enemyCode == 1)
         {
             wizardUnit.target = GameObject.FindGameObjectWithTag("OrangeUnit").transform; // unit find unit on oposing team

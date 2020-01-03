@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: -2105268253178454476}
   - component: {fileID: 101135368074668594}
   - component: {fileID: -6317140043862389232}
+  - component: {fileID: 9042276062315726982}
   m_Layer: 0
   m_Name: WizardUnit
   m_TagString: WizardTeam
@@ -314,7 +315,22 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 768
-  enemyTeam: WizardTeam
+--- !u!114 &9042276062315726982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2566663422998154060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6120abb2c5f94f458e779202e17603d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 15
+  maxHealth: 15
+  healthBarUI: {fileID: 8320211687213860609}
+  healthIndicator: {fileID: 9025203544924386548}
 --- !u!1 &7022335851284847186
 GameObject:
   m_ObjectHideFlags: 0
