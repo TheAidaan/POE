@@ -59,6 +59,11 @@ public class RangedUnit : MonoBehaviour
         timer += Time.deltaTime;
         checkCollison();
 
+        if (GetComponent<HealthScript>().isDead())
+        {
+            Destroy(gameObject);
+        }
+
 
     }
 
@@ -74,10 +79,6 @@ public class RangedUnit : MonoBehaviour
 
             //CoolDown();
 
-            if (GetComponent<HealthScript>().isDead())
-            {
-                GetTarget();
-            }
 
         }
 

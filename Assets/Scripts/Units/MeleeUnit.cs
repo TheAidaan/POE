@@ -64,7 +64,12 @@ public class MeleeUnit : MonoBehaviour
 
         timer += Time.deltaTime;
         checkCollison();
-       
+
+        if (GetComponent<HealthScript>().isDead())
+        {
+           Destroy(gameObject);
+        }
+
 
     }
 
@@ -79,11 +84,6 @@ public class MeleeUnit : MonoBehaviour
             hits[0].GetComponent<HealthScript>().ApplyDamage(meleeUnit.damage);
             
             //CoolDown();
-
-            if (GetComponent<HealthScript>().isDead())
-            {
-                GetTarget();
-            }
 
         }
 

@@ -49,8 +49,8 @@ public class HealthScript : MonoBehaviour
     {
         if (health < 0)
         {
-            Destroy(gameObject);
-        return true; 
+            
+            return true; 
     }
         else
             return false;

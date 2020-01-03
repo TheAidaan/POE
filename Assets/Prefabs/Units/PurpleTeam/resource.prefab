@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8655672396237284319}
   - component: {fileID: 3257618170889308139}
   - component: {fileID: 11348790738351147}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 2668560592545326270}
   - component: {fileID: 146145890223032344}
   - component: {fileID: 7181374754618759612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: resource
   m_TagString: PurpleBuilding
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 6454850944989803659}
   - component: {fileID: 4476930403755736510}
   - component: {fileID: 307290497728247196}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 4874625329577001283}
   - component: {fileID: 1255141687726642962}
   - component: {fileID: 8449020498946515347}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4422663190427531414}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 1471897036174129360}
   - component: {fileID: 138120660512124882}
   - component: {fileID: 3797472542044907030}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3942242813034904165}
   - component: {fileID: 1532850667347486397}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 7374869116751850669}
   - component: {fileID: 1068737591253421467}
   - component: {fileID: 2545287716270685067}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

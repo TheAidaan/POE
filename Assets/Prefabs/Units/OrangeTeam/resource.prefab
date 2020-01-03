@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3107145426146380810}
   - component: {fileID: 1366266562720403794}
   - component: {fileID: 7948941120348344585}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 6909282278598748907}
   - component: {fileID: 8768837857005034273}
   - component: {fileID: 2125028097560210557}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 2620186422423930460}
   - component: {fileID: 5535173415983064938}
   - component: {fileID: 7013974309985440122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5299135501337893269}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2934019365886166398}
   - component: {fileID: 3656343516070497586}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 7439592412173187817}
   - component: {fileID: 2316549940333708411}
   - component: {fileID: 4091649378126758380}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 7425495084840930895}
   - component: {fileID: 4409391350858993570}
   - component: {fileID: 1714648836053757385}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: resource
   m_TagString: OrangeBuilding
   m_Icon: {fileID: 0}
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 1986146209599413882}
   - component: {fileID: 8945637271900444495}
   - component: {fileID: 5064226159025102701}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

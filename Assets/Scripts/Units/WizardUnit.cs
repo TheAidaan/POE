@@ -35,10 +35,6 @@ public class WizardUnit : MonoBehaviour
         wizardUnit.damage = 2f;
 
 
-
-
-
-
     }
     void Start()
     {
@@ -64,6 +60,10 @@ public class WizardUnit : MonoBehaviour
         timer += Time.deltaTime;
         checkCollison();
 
+        if (GetComponent<HealthScript>().isDead())
+        {
+            Destroy(gameObject);
+        }
 
     }
 
@@ -73,16 +73,7 @@ public class WizardUnit : MonoBehaviour
         Collider[] hits = Physics.OverlapSphere(transform.position, .5f, enemyLayer);
         if (hits.Length > 0)
         {
-            Debug.Log("worked!");
-
             hits[0].GetComponent<HealthScript>().ApplyDamage(wizardUnit.damage);
-
-            //CoolDown();
-
-            if (GetComponent<HealthScript>().isDead())
-            {
-                GetTarget();
-            }
 
         }
 

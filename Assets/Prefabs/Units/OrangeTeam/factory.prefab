@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 421561484773520911}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 8029444722607655810}
   - component: {fileID: 6731413921236378580}
   - component: {fileID: 7390751093858617789}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 3731353989139933191}
   - component: {fileID: 173704326920614863}
   - component: {fileID: 5638673577150526049}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,8 @@ GameObject:
   - component: {fileID: 4359813983639762826}
   - component: {fileID: -8519579827946317146}
   - component: {fileID: 9010863697531306900}
-  m_Layer: 0
+  - component: {fileID: 8127080270013371215}
+  m_Layer: 8
   m_Name: factory
   m_TagString: OrangeBuilding
   m_Icon: {fileID: 0}
@@ -310,6 +311,18 @@ MonoBehaviour:
   maxHealth: 50
   healthBarUI: {fileID: 7785439160840650989}
   healthIndicator: {fileID: 3413331540786899690}
+--- !u!114 &8127080270013371215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6300797713227198085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe04e0d613548f4a9225171815084ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7785439160840650989
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +335,7 @@ GameObject:
   - component: {fileID: 2352224087349624393}
   - component: {fileID: 9067430217276613682}
   - component: {fileID: 4680055439179296449}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,7 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3271343938309622321}
   - component: {fileID: 3413331540786899690}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
