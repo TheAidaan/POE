@@ -461,9 +461,10 @@ GameObject:
   - component: {fileID: 8036026036268130032}
   - component: {fileID: 7425495084840930895}
   - component: {fileID: 4409391350858993570}
+  - component: {fileID: 1714648836053757385}
   m_Layer: 0
   m_Name: resource
-  m_TagString: Untagged
+  m_TagString: OrangeBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -506,7 +507,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6475871435802520803}
   serializedVersion: 2
-  m_Mass: 9
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -514,6 +515,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &1714648836053757385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475871435802520803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6120abb2c5f94f458e779202e17603d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  maxHealth: 50
+  healthBarUI: {fileID: 2291091415218027603}
+  healthIndicator: {fileID: 3656343516070497586}
 --- !u!1 &8557886195050823503
 GameObject:
   m_ObjectHideFlags: 0

@@ -107,11 +107,11 @@ public class WizardUnit : MonoBehaviour
         enemyCode = Random.Range(0, 2); // picks random target to attack 
         if (enemyCode == 1)
         {
-            wizardUnit.target = GameObject.FindGameObjectWithTag("OrangeTeam").transform; // unit find unit on oposing team
+            wizardUnit.target = GameObject.FindGameObjectWithTag("OrangeUnit").transform; // unit find unit on oposing team
         }
         else
         {
-            wizardUnit.target = GameObject.FindGameObjectWithTag("PurpleTeam").transform; // unit find unit on oposing team
+            wizardUnit.target = GameObject.FindGameObjectWithTag("PurpleUnit").transform; // unit find unit on oposing team
         }
     }
 

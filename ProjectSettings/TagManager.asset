@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - OrangeTeam
-  - PurpleTeam
   - WizardTeam
+  - OrangeUnit
+  - PurpleUnit
+  - OrangeBuilding
+  - PurpleBuilding
   layers:
   - Default
   - TransparentFX

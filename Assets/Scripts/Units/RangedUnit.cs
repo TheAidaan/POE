@@ -13,7 +13,8 @@ public class RangedUnit : MonoBehaviour
     public GameObject attackPoint;
     public LayerMask enemyLayer;
 
-    public string enemyTeam;
+    public string enemyBuilding;
+    public string enemyUnit;
 
     int enemyCode;
 
@@ -97,14 +98,23 @@ public class RangedUnit : MonoBehaviour
 
     private void GetTarget()
     {
-        enemyCode = Random.Range(0, 2); // picks random target to attack 
+        enemyCode = Random.Range(0, 3); // picks random target to attack 
         if (enemyCode == 1)
         {
-            rangedUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
+            rangedUnit.target = GameObject.FindGameObjectWithTag(enemyBuilding).transform; // unit find unit on oposing team
         }
         else
         {
-            rangedUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on wizard team
+            if (enemyCode == 2)
+            {
+                rangedUnit.target = GameObject.FindGameObjectWithTag(enemyUnit).transform; // unit find unit on oposing team
+            }
+            else
+            {
+                rangedUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on  wizard team
+            }
+
+
         }
     }
 

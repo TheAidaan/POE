@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 5428696251633805193}
   m_Layer: 8
   m_Name: MeleeUnit
-  m_TagString: OrangeTeam
+  m_TagString: OrangeUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,7 +406,8 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
-  enemyTeam: PurpleTeam
+  enemyBuilding: PurpleBuilding
+  enemyUnit: PurpleUnit
 --- !u!114 &5428696251633805193
 MonoBehaviour:
   m_ObjectHideFlags: 0

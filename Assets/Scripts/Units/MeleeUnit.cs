@@ -16,7 +16,8 @@ public class MeleeUnit : MonoBehaviour
     public GameObject attackPoint2;
     public LayerMask enemyLayer;
 
-    public string enemyTeam;
+    public string enemyBuilding;
+    public string enemyUnit;
 
     private float waitTime = 1223.0f;
     private float timer = 0.0f;
@@ -105,14 +106,23 @@ public class MeleeUnit : MonoBehaviour
 
     private void GetTarget()
     {
-        enemyCode = Random.Range(0, 2); // picks random target to attack 
+        enemyCode = Random.Range(0, 3); // picks random target to attack 
         if (enemyCode == 1)
         {
-            meleeUnit.target = GameObject.FindGameObjectWithTag(enemyTeam).transform; // unit find unit on oposing team
+            meleeUnit.target = GameObject.FindGameObjectWithTag(enemyBuilding).transform; // unit find unit on oposing team
         }
         else
         {
-            meleeUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on  wizard team
+            if (enemyCode == 2)
+            {
+                meleeUnit.target = GameObject.FindGameObjectWithTag(enemyUnit).transform; // unit find unit on oposing team
+            }
+                else
+                {
+                    meleeUnit.target = GameObject.FindGameObjectWithTag("WizardTeam").transform; // unit find unit on  wizard team
+                }
+            
+            
         }
     }
 }

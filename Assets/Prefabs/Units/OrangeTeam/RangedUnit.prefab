@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 3228823804120455098}
   m_Layer: 8
   m_Name: RangedUnit
-  m_TagString: OrangeTeam
+  m_TagString: OrangeUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -566,12 +566,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3b8943d64d445b44acf54f27436c983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: {fileID: 3709811041733604335, guid: 5f6d9e41831388f4c8b1946fd45e3f08,
+  attackPoint: {fileID: 5687411378620037259, guid: 8c6aa9340a7ea3743a2827fb87dd58ef,
     type: 3}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
-  enemyTeam: PurpleTeam
+  enemyBuilding: PurpleBuilding
+  enemyUnit: PurpleUnit
 --- !u!114 &3542879471492499295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,5 +601,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd149328efcf32340bdebf48a5d6d129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3709811041733604335, guid: 5f6d9e41831388f4c8b1946fd45e3f08, type: 3}
+  bullet: {fileID: 5687411378620037259, guid: 8c6aa9340a7ea3743a2827fb87dd58ef, type: 3}
   bulletPos: {fileID: 2136452883836321012}
