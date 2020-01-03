@@ -51,9 +51,7 @@ public class RangedUnit : MonoBehaviour
         }
 
         if (ranged_State == UnitState.ATTACK)
-        {
-
-            
+        {         
             rangedUnit.Attack(transform.position);
         }
         timer += Time.deltaTime;

@@ -12,7 +12,7 @@ public class WizardUnit : MonoBehaviour
 
     private UnitState wizard_State;
     
-    public LayerMask enemyLayer;
+    private LayerMask enemyLayer;
 
 
     int enemyCode;
@@ -46,7 +46,12 @@ public class WizardUnit : MonoBehaviour
 
     void Update()
     {
-       
+        if (GetComponent<HealthScript>().isDead())
+        {
+            gameObject.name = "Dead";
+            Destroy(gameObject);
+        }
+
         if (wizard_State == UnitState.MOVE)
         {
             wizardUnit.Move(transform.position, wizardUnit.target.position);
@@ -59,11 +64,7 @@ public class WizardUnit : MonoBehaviour
         timer += Time.deltaTime;
         checkCollison();
 
-        if (GetComponent<HealthScript>().isDead())
-        {
-            gameObject.name = "Dead";
-            Destroy(gameObject);     
-        }
+       
 
         if (wizardUnit.target.gameObject.name == ("Dead"))
         {
@@ -108,10 +109,12 @@ public class WizardUnit : MonoBehaviour
         if (enemyCode == 1)
         {
             wizardUnit.target = GameObject.FindGameObjectWithTag("OrangeUnit").transform; // unit find unit on oposing team
+            enemyLayer = LayerMask.GetMask("OrangeTeam");
         }
         else
         {
             wizardUnit.target = GameObject.FindGameObjectWithTag("PurpleUnit").transform; // unit find unit on oposing team
+            enemyLayer = LayerMask.GetMask("PurpleTeam");
         }
     }
 
